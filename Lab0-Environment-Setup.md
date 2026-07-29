@@ -19,15 +19,15 @@ Evidence is provided for the Kali environment.
 
 | Component | Kali Verified Version / Status | Kali Proof |
 |-----------|--------------------------------|------------|
-| Docker | Docker version XX.X.X | `Evidence/kali/1.docker.png` |
-| AWS CLI | aws-cli/2.XX.X | `Evidence/kali/2.awscli.png` |
-| kind | kind v0.XX.0 | `Evidence/kali/3.kind.png` |
-| kubectl | Client version v1.XX.X | `Evidence/kali/3.kubectl.png` |
-| OpenSSL | OpenSSL 3.X.X | `Evidence/kali/4.Helper.png` |
+| Docker | Docker version 28.5.2 | `Evidence/kali/1.docker.png` |
+| AWS CLI | aws-cli/2.36.9 | `Evidence/kali/2.awscli.png` |
+| kind | kind v0.23.0 | `Evidence/kali/3.kind&kubectl.png` |
+| kubectl | Client version v1.33.4, Kustomize v5.5.0 | `Evidence/kali/3.kind&kubectl.png` |
+| OpenSSL | OpenSSL 3.5.5 | `Evidence/kali/4.Helper.png` |
 | oathtool | OATH Toolkit 2.6.14 | `Evidence/kali/4.Helper.png` |
-| LocalStack | Running and healthy on port 4566 | `Evidence/kali/5.localstack.png` |
-| Kubernetes | kind cluster `ccse` running with node `ccse-control-plane` ready | `Evidence/kali/5.1.kubernetes.png` |
-| AWS CLI LocalStack endpoint | Dummy credentials configured and STS caller identity tested through LocalStack | `Evidence/kali/6-config.png` |
+| LocalStack | Running and healthy on port 4566 (v2026.7.0) | `Evidence/kali/5.1.localstackhealth.png` , `Evidence/kali/5.localstack.png` |
+| Kubernetes | kind cluster `ccse` running with node `ccse-control-plane` ready | `Evidence/kali/6.kubernetes.png` |
+| AWS CLI LocalStack endpoint | Dummy credentials configured and STS caller identity tested through LocalStack | `Evidence/kali/7.config.png` |
 
 ## Step 1: Install and Verify Docker
 
@@ -38,10 +38,14 @@ On Linux, Docker was installed using the official convenience script:
 ```bash
 curl -fsSL https://get.docker.com | sh
 sudo usermod -aG docker $USER
-After installation (and re-login), Docker was verified with:
-docker --version
-docker run --rm hello-world
 ```
+After installation (and re-login), Docker was verified with:
+```
+docker --version
+```
+The Kali proof shows Docker version 28.5.2
+<img src="Evidence/kali/1.docker.png" alt="Docker">
+
 ## Step 2: Install and Verify AWS CLI v2
 AWS CLI v2 is required to send AWS-style commands to LocalStack during the labs.
 Linux installation:
