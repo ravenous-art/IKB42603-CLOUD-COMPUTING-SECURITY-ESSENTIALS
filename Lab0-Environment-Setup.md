@@ -4,7 +4,7 @@
 
 **Course:** IKB42603 Cloud Computing Security Essentials  
 **Lab:** Lab 0 - Environment Setup  
-**Name:** YOUR FULL NAME HERE  
+**Name:** SYAHMI IKBAL
 **Date:** 29 July 2026  
 
 ## Objective
@@ -149,6 +149,9 @@ EP='--endpoint-url=http://localhost:4566'
 aws $EP sts get-caller-identity
 ```
 The Kali proof shows the dummy credentials configured and a successful STS caller identity response from LocalStack.
+
+<img src="Evidence/kali/7.config.png" alt="AWS Config">
+
 ```
 Pre-Lab Verification Checklist
 ```
