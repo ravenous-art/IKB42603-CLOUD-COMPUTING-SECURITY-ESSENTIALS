@@ -91,6 +91,13 @@ Kustomize version v5.5.0
 openssl version
 oathtool --version
 ```
+The Kali proof shows:
+
+OpenSSL 3.5.5,
+oathtool / OATH Toolkit 2.6.14
+
+<img src="Evidence/kali/4.Helper.png" alt="Helper tools">
+
 Trivy is used later via Docker:
 ```
 docker run --rm aquasec/trivy image <name>
@@ -108,12 +115,11 @@ curl http://localhost:4566/_localstack/health
 docker ps
 ```
 The health endpoint returned available services and docker ps showed the LocalStack container running with a healthy status on port 4566
-Useful commands:
-```
-docker stop localstack
-docker start localstack
-docker rm -f localstack
-```
+
+<img src="Evidence/kali/5.localstack.png" alt="LocalStack">
+
+<img src="Evidence/kali/5.1.localstackhealth.png" alt="LocalStack Health">
+
 ## Step 6: Create and Verify the Kubernetes Cluster
 ```
 kind create cluster --name ccse
