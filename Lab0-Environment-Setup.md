@@ -129,11 +129,9 @@ Verified with:
 kubectl cluster-info --context kind-ccse
 kubectl get nodes
 ```
-The Kali proof confirms:
+The Kali proof confirms the node ccse-control-plane is in Ready state.
 
-Kubernetes control plane is running
-Node ccse-control-plane is in Ready state
-Kubernetes version v1.30.0
+<img src="Evidence/kali/6.kubernetes.png" alt="Kubernetes">
 
 The cluster was later removed with:
 ```
