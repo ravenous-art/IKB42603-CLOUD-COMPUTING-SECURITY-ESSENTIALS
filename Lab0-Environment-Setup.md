@@ -39,6 +39,7 @@ On Linux, Docker was installed using the official convenience script:
 curl -fsSL https://get.docker.com | sh
 sudo usermod -aG docker $USER
 After installation (and re-login), Docker was verified with:
-```bash
 docker --version
 docker run --rm hello-world
+```
+## Step 2: Install and Verify AWS CLI v2
