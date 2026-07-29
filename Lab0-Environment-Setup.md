@@ -45,3 +45,30 @@ docker run --rm hello-world
 ## Step 2: Install and Verify AWS CLI v2
 AWS CLI v2 is required to send AWS-style commands to LocalStack during the labs.
 Linux installation:
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o awscliv2.zip
+unzip awscliv2.zip && sudo ./aws/install
+```
+Verified with:
+```
+aws --version
+```
+## Step 3: Install and Verify kind and kubectl
+```
+# kind
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-amd64
+chmod +x ./kind && sudo mv ./kind /usr/local/bin/kind
+
+# kubectl
+sudo snap install kubectl --classic
+```
+Verified with:
+```
+kind --version
+kubectl version --client
+```
+## Step 4: Install and Verify Helper Tools
+```
+openssl version
+oathtool --version
+```
