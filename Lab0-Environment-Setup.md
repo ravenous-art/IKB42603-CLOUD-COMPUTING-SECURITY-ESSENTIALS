@@ -131,14 +131,14 @@ Pre-Lab Verification Checklist
 ```
 | Check | Kali OS |
 |-------------------------------------------------|-------------|
-|docker --version prints a version,Completed
-aws --version prints AWS CLI v2,Completed
-kind --version works,Completed
-kubectl version --client works,Completed
-openssl version works,Completed
-oathtool --version works,Completed
-LocalStack health endpoint responds,Completed
-Kubernetes cluster ccse is running,Completed
-kubectl get nodes shows a ready node,Completed
-AWS CLI dummy credentials are configured,Completed
-LocalStack endpoint variable is configured,Completed
+|docker --version prints a version|Completed|
+|aws --version prints AWS CLI v2|Completed|
+|kind --version works|Completed|
+|kubectl version --client works|Completed|
+|openssl version works|Completed|
+|oathtool --version works|Completed|
+|LocalStack health endpoint responds|Completed|
+|Kubernetes cluster ccse is running|Completed|
+|kubectl get nodes shows a ready node|Completed|
+|AWS CLI dummy credentials are configured|Completed|
+|LocalStack endpoint variable is configured|Completed|
