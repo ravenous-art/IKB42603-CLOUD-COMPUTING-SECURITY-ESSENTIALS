@@ -43,3 +43,5 @@ docker --version
 docker run --rm hello-world
 ```
 ## Step 2: Install and Verify AWS CLI v2
+AWS CLI v2 is required to send AWS-style commands to LocalStack during the labs.
+Linux installation:
