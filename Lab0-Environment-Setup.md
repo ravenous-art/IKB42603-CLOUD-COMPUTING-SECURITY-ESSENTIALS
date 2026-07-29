@@ -150,3 +150,6 @@ Pre-Lab Verification Checklist
 |AWS CLI cannot connect to endpoint URL|Make sure LocalStack is running and use $EP|
 |kind cluster creation fails|Make sure Docker is running and has enough memory|
 |MFA / TOTP code fails in later labs|Enable automatic system time synchronization|
+
+## Conclusion
+The Lab 0 environment setup was completed successfully on Kali Linux. Docker, AWS CLI v2, kind, kubectl, OpenSSL, oathtool, LocalStack, and the local kind Kubernetes cluster were installed and verified. The environment is ready for the next IKB42603 Cloud Computing Security Essentials lab activities using LocalStack and Kubernetes.
