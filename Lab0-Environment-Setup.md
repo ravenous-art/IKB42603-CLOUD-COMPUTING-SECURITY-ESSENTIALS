@@ -129,8 +129,9 @@ The Kali proof shows the dummy credentials configured and a successful STS calle
 ```
 Pre-Lab Verification Checklist
 ```
-Check,Kali OS
-docker --version prints a version,Completed
+| Check | Kali OS |
+|-------------------------------------------------|-------------|
+|docker --version prints a version,Completed
 aws --version prints AWS CLI v2,Completed
 kind --version works,Completed
 kubectl version --client works,Completed
