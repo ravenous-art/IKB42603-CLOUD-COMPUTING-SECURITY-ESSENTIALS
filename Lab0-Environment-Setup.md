@@ -4,7 +4,7 @@
 
 **Course:** IKB42603 Cloud Computing Security Essentials  
 **Lab:** Lab 0 - Environment Setup  
-**Name:** SYAHMI IKBAL
+**Name:** SYAHMI IKBAL, 
 **Date:** 29 July 2026  
 
 ## Objective
