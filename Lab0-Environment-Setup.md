@@ -72,3 +72,41 @@ kubectl version --client
 openssl version
 oathtool --version
 ```
+Trivy is used later via Docker:
+```
+docker run --rm aquasec/trivy image <name>
+```
+## Step 5: Start and Verify LocalStack
+LocalStack was installed using the LocalStack CLI and authenticated with a free auth token:
+```
+pipx install localstack
+localstack auth set-token <YOUR_AUTH_TOKEN>
+localstack start
+```
+LocalStack started successfully with version 2026.7.0 and was verified with:
+```
+curl http://localhost:4566/_localstack/health
+docker ps
+```
+The health endpoint returned available services and docker ps showed the LocalStack container running with a healthy status on port 4566
+Useful commands:
+```
+docker stop localstack
+docker start localstack
+docker rm -f localstack
+```
+## Step 6: Create and Verify the Kubernetes Cluster
+```
+kind create cluster --name ccse
+```
+Verified with:
+```
+kubectl cluster-info --context kind-ccse
+kubectl get nodes
+```
+The Kali proof confirms:
+
+Kubernetes control plane is running
+Node ccse-control-plane is in Ready state
+Kubernetes version v1.30.0
+The cluster was later removed with:
