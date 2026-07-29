@@ -58,6 +58,12 @@ Verified with:
 ```
 aws --version
 ```
+The Kali proof shows AWS CLI version 2.36.9
+
+<img src="Evidence/kali/2.awscli.png" alt="AWS CLI">
+
+No real AWS account is required because all commands are pointed to LocalStack
+
 ## Step 3: Install and Verify kind and kubectl
 ```
 # kind
