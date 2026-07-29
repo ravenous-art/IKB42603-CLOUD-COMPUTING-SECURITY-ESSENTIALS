@@ -109,4 +109,35 @@ The Kali proof confirms:
 Kubernetes control plane is running
 Node ccse-control-plane is in Ready state
 Kubernetes version v1.30.0
+
 The cluster was later removed with:
+```
+kind delete cluster --name ccse
+```
+## Step 7: Configure AWS CLI for LocalStack
+```
+aws configure set aws_access_key_id test
+aws configure set aws_secret_access_key test
+aws configure set region us-east-1
+```
+In every terminal session:
+```
+EP='--endpoint-url=http://localhost:4566'
+aws $EP sts get-caller-identity
+```
+The Kali proof shows the dummy credentials configured and a successful STS caller identity response from LocalStack.
+```
+Pre-Lab Verification Checklist
+```
+Check,Kali OS
+docker --version prints a version,Completed
+aws --version prints AWS CLI v2,Completed
+kind --version works,Completed
+kubectl version --client works,Completed
+openssl version works,Completed
+oathtool --version works,Completed
+LocalStack health endpoint responds,Completed
+Kubernetes cluster ccse is running,Completed
+kubectl get nodes shows a ready node,Completed
+AWS CLI dummy credentials are configured,Completed
+LocalStack endpoint variable is configured,Completed
