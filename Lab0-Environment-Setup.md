@@ -142,3 +142,11 @@ Pre-Lab Verification Checklist
 |kubectl get nodes shows a ready node|Completed|
 |AWS CLI dummy credentials are configured|Completed|
 |LocalStack endpoint variable is configured|Completed|
+
+| Symptom | Recommended Fix |
+|--------------------------------------------------------|-------------------------------------------------|
+|Cannot connect to Docker daemon|Start Docker or re-login after adding user to the docker group|
+|Port 4566 already in use|docker rm -f localstack then start again|
+|AWS CLI cannot connect to endpoint URL|Make sure LocalStack is running and use $EP|
+|kind cluster creation fails|Make sure Docker is running and has enough memory|
+|MFA / TOTP code fails in later labs|Enable automatic system time synchronization|
