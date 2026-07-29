@@ -152,7 +152,7 @@ The Kali proof shows the dummy credentials configured and a successful STS calle
 
 <img src="Evidence/kali/7.config.png" alt="AWS Config">
 
-------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
 ## Pre-Lab Verification Checklist
 
 | Check | Kali OS |
@@ -168,6 +168,8 @@ The Kali proof shows the dummy credentials configured and a successful STS calle
 |kubectl get nodes shows a ready node|Completed|
 |AWS CLI dummy credentials are configured|Completed|
 |LocalStack endpoint variable is configured|Completed|
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 | Symptom | Recommended Fix |
 |--------------------------------------------------------|-------------------------------------------------|
