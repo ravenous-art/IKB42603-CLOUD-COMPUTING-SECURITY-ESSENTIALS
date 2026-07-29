@@ -44,6 +44,7 @@ After installation (and re-login), Docker was verified with:
 docker --version
 ```
 The Kali proof shows Docker version 28.5.2
+
 <img src="Evidence/kali/1.docker.png" alt="Docker">
 
 ## Step 2: Install and Verify AWS CLI v2
