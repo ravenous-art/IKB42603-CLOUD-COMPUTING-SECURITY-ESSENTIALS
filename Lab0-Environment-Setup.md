@@ -38,3 +38,7 @@ On Linux, Docker was installed using the official convenience script:
 ```bash
 curl -fsSL https://get.docker.com | sh
 sudo usermod -aG docker $USER
+After installation (and re-login), Docker was verified with:
+```bash
+docker --version
+docker run --rm hello-world
