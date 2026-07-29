@@ -72,6 +72,14 @@ Verified with:
 kind --version
 kubectl version --client
 ```
+The Kali proof shows:
+
+kind version 0.23.0
+kubectl client version v1.33.4
+Kustomize version v5.5.0
+
+<img src="Evidence/kali/3.kind&#x26;kubectl.png" alt="kind and kubectl">
+
 ## Step 4: Install and Verify Helper Tools
 ```
 openssl version
