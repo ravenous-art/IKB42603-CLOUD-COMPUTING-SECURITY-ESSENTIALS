@@ -19,7 +19,6 @@ The lab is divided into several tasks that guide the student through:
 - Confirm that the lab environment is ready for configuration.
 
 Evidence:
-- [Environment setup screenshot]
   <img src="IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/Lab1_Account_Security_and_IAM/Evidence/lab1_task1.png" alt="setup">
 
 ### 2. Account Security Configuration
