@@ -13,7 +13,7 @@ The lab is divided into several tasks that guide the student through:
 
 ## Step-by-Step Report
 
-### 1. Environment Setup
+### Environment Setup
 - Launch the lab environment and confirm that the virtual machine or cloud console is accessible.
 - Ensure that the required account, credentials, and tools are available before proceeding.
 - Confirm that the lab environment is ready for configuration.
@@ -21,7 +21,7 @@ The lab is divided into several tasks that guide the student through:
 Evidence:
   <img src="Evidence/lab1_task1.png" alt="setup">
 
-### 2. Account Security Configuration
+### TASK 2. Account Security Configuration
 - Review the account security baseline and identify the relevant security settings that must be enabled.
 - Configure the account with protective measures appropriate for the lab scenario.
 - Apply security settings that reduce the risk of unauthorized access.
