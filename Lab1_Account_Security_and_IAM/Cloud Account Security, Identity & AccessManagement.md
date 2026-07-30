@@ -19,7 +19,7 @@ The lab is divided into several tasks that guide the student through:
 - Confirm that the lab environment is ready for configuration.
 
 Evidence:
-- [Environment setup screenshot](Lab1_Account_Security_and_IAM/Evidence/lab1_setup.png)
+- [Environment setup screenshot](Lab1_task1.png)
 
 ### 2. Account Security Configuration
 - Review the account security baseline and identify the relevant security settings that must be enabled.
