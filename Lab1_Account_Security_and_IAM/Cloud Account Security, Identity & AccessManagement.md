@@ -107,7 +107,7 @@ aws $EP iam get-group --group-name Admins
 ```
 
 ### Deliverable: Group Membership Verification
-![get-group Admins](Evidence/lab1_task2.png)
+![get-group Admins](Evidence/lab1_task2.1.png)
 
 > **Security tip:** Attaching policies to groups (not users) is how you keep permissions manageable and auditable at scale — change the group once, and every member updates.
 
