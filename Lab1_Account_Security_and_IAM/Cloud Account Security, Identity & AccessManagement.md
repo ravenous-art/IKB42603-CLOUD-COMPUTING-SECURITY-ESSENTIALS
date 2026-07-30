@@ -287,6 +287,8 @@ subjects:
   namespace: dev
 ```
 
+![Verification](Evidence/lab1_verification_command.png)
+
 ---
 
 ## Security Best-Practices Checklist
@@ -308,6 +310,8 @@ kind delete cluster --name ccse-lab1
 # Stop and remove LocalStack
 docker stop localstack && docker rm localstack
 ```
+
+![Cleanup-Teardown](Evidence/lab1_cleanup_teardown.png)
 
 ---
 
