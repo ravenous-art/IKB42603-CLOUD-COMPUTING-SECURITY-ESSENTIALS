@@ -174,6 +174,7 @@ kind create cluster --name ccse-lab1
 kubectl cluster-info --context kind-ccse-lab1
 kubectl get nodes
 ```
+![setup-local-cluster](Evidence/lab1_setup.png)
 
 ---
 
