@@ -139,8 +139,9 @@ kubectl describe resourcequota tenant-a-quota -n tenant-a
 ```
 
 ### Deliverable: Resource Quota Applied to Tenant A
-![Task 3 - Resource Quota Description](Evidence/task3.png)
-*GitHub Evidence Link:* [Task 3 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/task3.png)
+![Task 3 - Resource Quota Description](Evidence/lab2_task3.png)
+
+*GitHub Evidence Link:* [Task 3 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_task3.png)
 
 > **Note:** End of Session A. Save the HTTP 200 result — you will show that the SAME probe returns a failure after applying network policy in Session B.
 
@@ -173,8 +174,9 @@ kubectl -n tenant-a run probe-rm-it --image curlimages/curl --restart=Never   --
 > **Security tip:** Capture both results side by side: HTTP 200 (before) and timeout (after). This single before/after is the strongest evidence of enforced network isolation.
 
 ### Deliverable: Cross-Tenant Probe After Network Policy (Timeout / Blocked)
-![Task 4 - After Probe Result (Timeout)](Evidence/task4.png)
-*GitHub Evidence Link:* [Task 4 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/task4.png)
+![Task 4 - After Probe Result (Timeout)](Evidence/lab2_task4.png)
+
+*GitHub Evidence Link:* [Task 4 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_task4.png)
 
 ---
 
@@ -198,8 +200,9 @@ kubectl auth can-i get secrets -n tenant-b --as=$SA   # expect: no
 ```
 
 ### Deliverable: Auth Can-I Secret Isolation Proof (YES / NO)
-![Task 5 - Secret Isolation Auth Check](Evidence/task5.png)
-*GitHub Evidence Link:* [Task 5 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/task5.png)
+![Task 5 - Secret Isolation Auth Check](Evidence/lab2_task5.png)
+
+*GitHub Evidence Link:* [Task 5 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_task5.png)
 
 ---
 
@@ -218,8 +221,9 @@ docker run --rm -v ccse-vol:/data alpine sh -c   'echo SENSITIVE > /data/phi2.tx
 > **Note:** In cloud storage you rarely control physical blocks, so the practical answer to remanence is cryptographic erasure (destroy the key). You will do exactly that in Lab 3.
 
 ### Deliverable: Remanence Scan & Secure Wipe Output
-![Task 6 - Data Remanence and Secure Deletion](Evidence/task6.png)
-*GitHub Evidence Link:* [Task 6 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/task6.png)
+![Task 6 - Data Remanence and Secure Deletion](Evidence/lab2_task6.png)
+
+*GitHub Evidence Link:* [Task 6 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_task6.png)
 
 ---
 
@@ -294,6 +298,7 @@ kind delete cluster --name ccse-lab2
 # Remove the Docker volume created during Task 6
 docker volume rm ccse-vol
 ```
+![Cleanup - Teardown](Evidence/lab2_cleanup.png)
 
 ---
 
