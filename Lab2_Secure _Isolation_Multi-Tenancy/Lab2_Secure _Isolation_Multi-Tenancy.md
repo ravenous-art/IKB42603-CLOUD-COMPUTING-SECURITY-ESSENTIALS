@@ -111,8 +111,9 @@ kubectl -n tenant-a run probe-rm-it --image curlimages/curl --restart=Never   --
 > **Caution:** A result of **HTTP 200** means `tenant-a` reached `tenant-b`. On shared infrastructure, isolation is **NOT** automatic — you must configure it. This is the multi-tenancy risk from Week 3.
 
 ### Deliverable: Cross-Tenant Probe Before Network Policy (HTTP 200)
-![Task 2 - Before Probe Result (HTTP 200)](Evidence/task2.png)
-*GitHub Evidence Link:* [Task 2 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/task2.png)
+![Task 2 - Before Probe Result (HTTP 200)](Evidence/lab2_task2.png)
+
+*GitHub Evidence Link:* [Task 2 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_task2.png)
 
 ---
 
