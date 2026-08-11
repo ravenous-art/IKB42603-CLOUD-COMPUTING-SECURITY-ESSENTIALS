@@ -64,6 +64,7 @@ kubectl -n kube-system rollout status daemonset/calico-node --timeout=180s
 ```
 ![setup](Evidence/lab2_setup.png)
 
+*GitHub Evidence Link:* [Setup Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_setup.png)
 
 > **Note:** If you have no internet in the lab room, your instructor can provide the `calico.yaml` file locally — apply it with `kubectl apply -f calico.yaml`.
 
@@ -299,6 +300,8 @@ kind delete cluster --name ccse-lab2
 docker volume rm ccse-vol
 ```
 ![Cleanup - Teardown](Evidence/lab2_cleanup.png)
+
+*GitHub Evidence Link:* [Cleanup Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_cleanup.png)
 
 ---
 
