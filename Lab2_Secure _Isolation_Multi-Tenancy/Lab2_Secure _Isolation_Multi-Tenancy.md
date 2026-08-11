@@ -90,7 +90,8 @@ kubectl get pods,svc -n tenant-b
 
 ### Deliverable: Pods and Services in Tenant Namespaces
 ![Task 1 - Pods and Services in tenant-a and tenant-b](Evidence/lab2_task1.png)
-*GitHub Evidence Link:* [Task 1 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_task1.png)
+
+*GitHub Evidence Link:* ![Task 1 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab2_Secure%20_Isolation_Multi-Tenancy/Evidence/lab2_task1.png)
 
 ---
 
