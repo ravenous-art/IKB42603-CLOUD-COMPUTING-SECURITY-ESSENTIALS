@@ -75,6 +75,7 @@ diff record.txt record.dec.txt && echo 'MATCH: decryption successful'
 
 #### Task 1 Evidence
 ![Task 1 - Symmetric Encryption](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step1.png)
+
 *(Relative Path: `Evidence/task1.png`)*
 
 ---
@@ -99,7 +100,8 @@ openssl dgst -sha256 -verify public.pem -signature record.sig record.txt
 > **Note:** Note how the roles reverse: encryption uses the public key, signing uses the private key.[cite: 10] This is the basis of PKI and TLS.[cite: 10]
 
 #### Task 2 Evidence
-![Task 2 - Asymmetric Encryption & Digital Signatures](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/task2.png)
+![Task 2 - Asymmetric Encryption & Digital Signatures](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step2.png)
+
 *(Relative Path: `Evidence/task2.png`)*
 
 ---
