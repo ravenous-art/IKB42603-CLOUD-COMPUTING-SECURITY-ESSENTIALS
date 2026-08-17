@@ -157,7 +157,8 @@ aws $EP kms encrypt --key-id $KEY_A --plaintext "$(echo -n 'hello' | base64)" \
 ```
 
 #### Task 4 Evidence
-![Task 4 - Create and Use KMS Master Key](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/task4.png)
+![Task 4 - Create and Use KMS Master Key](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/Lab3_step4.png)
+
 *(Relative Path: `Evidence/task4.png`)*
 
 ---
@@ -185,7 +186,8 @@ echo 'Only the KMS-wrapped data key (datakey.enc) remains.'
 > **Note:** To read the data later you send `datakey.enc` back to KMS (`kms decrypt`) to unwrap it, use it, then discard it.[cite: 10] Only the small master key ever needs hardware-grade protection.[cite: 10]
 
 #### Task 5 Evidence
-![Task 5 - Envelope Encryption](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/task5.png)
+![Task 5 - Envelope Encryption](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step5.png)
+
 *(Relative Path: `Evidence/task5.png`)*
 
 ---
@@ -211,7 +213,8 @@ aws $EP kms decrypt --ciphertext-blob fileb://datakey.enc 2>&1 | head -3
 > ⚠️ **Caution:** Once the key that wrapped the data key is gone, `record.env.enc` is just noise — no one, not even the provider, can decrypt it.[cite: 10] This is why per-object/per-tenant keys make deletion provable (Week 4).[cite: 10]
 
 #### Task 6 Evidence
-![Task 6 - Per-Tenant Keys & Cryptographic Erasure](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/task6.png)
+![Task 6 - Per-Tenant Keys & Cryptographic Erasure](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step6.png)
+
 *(Relative Path: `Evidence/task6.png`)*
 
 ---
@@ -235,7 +238,7 @@ for line in 'login ok' 'file read' 'export data'; do \
 ```
 
 #### Task 7 Evidence
-![Task 7 - Integrity & Tamper-Evidence](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/task7.png)
+![Task 7 - Integrity & Tamper-Evidence](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step7.png)
 *(Relative Path: `Evidence/task7.png`)*
 
 ---
@@ -282,8 +285,11 @@ If an attacker modifies, inserts, or deletes a historical log entry at index $k$
 aws --endpoint-url=http://localhost:4566 kms list-keys
 openssl dgst -sha256 -verify public.pem -signature record.sig record.txt
 ```
+![Task cleanup - cleanup](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_cleanup.png)
 
----
+```
+
+```
 
 ## Security Best-Practices Checklist[cite: 10]
 - [x] Data encrypted at rest (AES) and decryption verified.[cite: 10]
@@ -301,6 +307,7 @@ docker stop tls 2>/dev/null
 rm -f record.* private.pem public.pem key.pem cert.pem datakey.* tampered.txt
 docker stop localstack && docker rm localstack
 ```
+![Task verification - verify](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_verification.png)
 
 ---
 
