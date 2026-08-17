@@ -128,7 +128,10 @@ curl -k https://localhost:8443/record.txt
 > **Note:** End of Session A.[cite: 10] Stop the TLS container (`docker stop tls`).[cite: 10] Keep `record.enc`, the RSA keys, and all outputs for the report.[cite: 10]
 
 #### Task 3 Evidence
-![Task 3 - Encryption in Transit (TLS)](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/task3.png)
+![Task 3 - Encryption in Transit (TLS)](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step3.1.png)
+
+![Task 3 - Encryption in Transit (TLS) 2](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step3.2.png)
+
 *(Relative Path: `Evidence/task3.png`)*
 
 ---
