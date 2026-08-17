@@ -74,7 +74,7 @@ diff record.txt record.dec.txt && echo 'MATCH: decryption successful'
 *In your report: what is the key-distribution problem with symmetric encryption, and why does it matter for the cloud?*[cite: 10]
 
 #### Task 1 Evidence
-![Task 1 - Symmetric Encryption](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/task1.png)
+![Task 1 - Symmetric Encryption](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/lab3_step1.png)
 *(Relative Path: `Evidence/task1.png`)*
 
 ---
