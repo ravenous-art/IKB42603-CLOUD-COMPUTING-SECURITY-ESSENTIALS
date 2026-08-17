@@ -160,7 +160,7 @@ aws $EP kms encrypt --key-id $KEY_A --plaintext "$(echo -n 'hello' | base64)" \
 
 #### Task 4 Evidence
 ![Task 4 - Create and Use KMS Master Key](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab3_Encryption_and_Key_Management/Evidence/Lab3_step4.png)
-
+![Task-4-Create-and-Use-KMS-Master-Key](Evidence/lab3_step4.png)
 *(Relative Path: `Evidence/task4.png`)*
 
 ---
