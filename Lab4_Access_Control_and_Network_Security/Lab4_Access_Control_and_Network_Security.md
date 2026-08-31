@@ -207,7 +207,7 @@ docker run --rm aquasec/trivy image --severity HIGH,CRITICAL nginx:alpine | head
 ```
 
 #### Task 6 Evidence
-![Task 6 - Container Host Hardening](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab4_Access_Control_and_Network_Security/Evidence/task6.png)
+![Task 6 - Container Host Hardening](Evidence/web_db_BLOCKED_and_app_db_REACHABLE.png)
 *(Relative Path: `Evidence/task6.png`)*
 
 ---
@@ -263,8 +263,10 @@ This aligns directly with cloud Security Groups (AWS/Azure/GCP), which enforce a
 kubectl get rolebinding dev-rb -n app -o yaml
 docker inspect hardened --format '{{json .HostConfig.CapDrop}}'
 ```
+![Task - Command verification](Evidence/verification.png)
+```
 
----
+```
 
 ## Security Best-Practices Checklist
 - [x] Service requires authentication (unauthenticated requests rejected).
@@ -282,7 +284,7 @@ docker rm -f authsvc db app web hardened 2>/dev/null
 docker network rm frontend-net backend-net 2>/dev/null
 kind delete cluster --name ccse-lab4
 ```
-
+![Task 7 - Cleanup](Evidence/cleanup.png)
 ---
 
 ## Expansion Ideas (Advanced Students)
