@@ -161,7 +161,7 @@ docker exec app sh -c 'apk add -q curl; nc -z -w3 db 6379 && echo REACHABLE'
 > 💡 **Security tip:** The database is unreachable from the internet-facing tier. An attacker who compromises the web tier still cannot talk directly to the data — segmentation contains lateral movement.
 
 #### Task 4 Evidence
-![Task 4 - Network Segmentation](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab4_Access_Control_and_Network_Security/Evidence/task4.png)
+![Task 4 - Network Segmentation](Evidence/The_iptables_default_deny_ruleset.png)
 *(Relative Path: `Evidence/task4.png`)*
 
 ---
