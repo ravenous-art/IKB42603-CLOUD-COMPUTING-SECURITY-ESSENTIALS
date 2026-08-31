@@ -182,7 +182,7 @@ iptables -L INPUT -n'
 > **Note:** Default policy `DROP` with a single explicit `ACCEPT` is the security-group model: nothing is allowed unless you permit it (least privilege for the network).
 
 #### Task 5 Evidence
-![Task 5 - Firewall Rules Default-Deny](Evidence/The_three_auth_can_i_results_allowed_vs_denied.png)
+![Task 5 - Firewall Rules Default-Deny](Evidence/The_three_auth_can_i_results__allowed_vs_denied.png)
 *(Relative Path: `Evidence/task5.png`)*
 
 ---
