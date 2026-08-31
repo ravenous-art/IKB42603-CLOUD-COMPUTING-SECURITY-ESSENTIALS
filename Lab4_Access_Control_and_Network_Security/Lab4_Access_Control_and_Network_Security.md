@@ -81,7 +81,7 @@ curl -s -u student:'P@ssword!' http://localhost:8080                   # 200 Aut
 ```
 
 #### Task 1 Evidence
-![Task 1 - Authentication & Authorization](Evidence/lab1_task1.png)
+![Task 1 - Authentication & Authorization](Evidence/The 401 (no credentials) and 200 (valid credentials) results.png)
 *(Relative Path: `Evidence/task1.png`)*
 
 ---
