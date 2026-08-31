@@ -129,7 +129,7 @@ kubectl auth can-i delete pods -n app --as=$SA       # no
 > **Note:** End of Session A. Keep the 401/200 results, the MFA OK output, and the three `can-i` results. Stop the auth service (`docker stop authsvc`).
 
 #### Task 3 Evidence
-![Task 3 - Authorization RBAC Roles](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab4_Access_Control_and_Network_Security/Evidence/task3.png)
+![Task 3 - Authorization RBAC Roles](Evidence/The_hardened_container_inspect_output_and_the_Trivy_scan_summary_2.png)
 *(Relative Path: `Evidence/task3.png`)*
 
 ---
