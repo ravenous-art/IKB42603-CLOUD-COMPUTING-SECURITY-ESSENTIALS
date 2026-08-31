@@ -103,7 +103,7 @@ read -p 'Enter the 6-digit code: ' CODE
 > **Note:** MFA combines factors from different classes (something you know + something you have). It defeats the majority of credential attacks — the cheapest big security win.
 
 #### Task 2 Evidence
-![Task 2 - Add a Second Factor (MFA / TOTP)](The_MFA_OK_output_for_a_valid_TOTP_code.png)
+![Task 2 - Add a Second Factor (MFA / TOTP)](Evidence/The_MFA_OK_output_for_a_valid_TOTP_code.png)
 *(Relative Path: `Evidence/task2.png`)*
 
 ---
