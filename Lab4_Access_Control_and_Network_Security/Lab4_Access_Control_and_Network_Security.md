@@ -81,7 +81,7 @@ curl -s -u student:'P@ssword!' http://localhost:8080                   # 200 Aut
 ```
 
 #### Task 1 Evidence
-![Task 1 - Authentication & Authorization](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab4_Access_Control_and_Network_Security/Evidence/task1.png)
+![Task 1 - Authentication & Authorization](Evidence/lab1_task1.png)
 *(Relative Path: `Evidence/task1.png`)*
 
 ---
