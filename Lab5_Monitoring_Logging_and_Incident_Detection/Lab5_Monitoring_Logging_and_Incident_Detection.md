@@ -80,6 +80,7 @@ cat auth.log
 
 ### Deliverable: Application Auth Log Created
 ![Task 1 - Generated Application Auth Logs](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task1.png)
+
 *GitHub Evidence Link:* [Task 1 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task1.png)
 
 ---
@@ -102,8 +103,9 @@ aws $EP logs get-log-events --log-group-name /ccse/app --log-stream-name auth \
 ```
 
 ### Deliverable: Centralised Log Read-Back Output from CloudWatch
-![Task 2 - Centralised Log Read-Back from CloudWatch](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task2.png)
-*GitHub Evidence Link:* [Task 2 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task2.png)
+![Task 2 - Centralised Log Read-Back from CloudWatch](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task2.png)
+
+*GitHub Evidence Link:* [Task 2 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task2.png)
 
 ---
 
@@ -119,8 +121,9 @@ grep LOGIN_FAIL auth.log | awk '{print $4, $5}' | sort | uniq -c
 > **Note:** Distinguish a log (durable record) from an event (a trigger): an **EVENT** would be `"alert: 4 failures from 203.0.113.9"` fired in near real time. End of Session A. Keep `auth.log` and the centralised read-back. Next week you will make these logs tamper-proof and use them to detect an incident.
 
 ### Deliverable: Failed Login Count Grouped by IP
-![Task 3 - Query Failed Logins Grouped by IP](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task3.png)
-*GitHub Evidence Link:* [Task 3 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task3.png)
+![Task 3 - Query Failed Logins Grouped by IP](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task3.png)
+
+*GitHub Evidence Link:* [Task 3 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task3.png)
 
 ---
 
@@ -156,8 +159,9 @@ diff -u auth.chain auth.tampered.chain
 > **Security tip:** Store the final hash (or forward the chain) to a separate, append-only location so an attacker who owns the app cannot also rewrite its audit trail (Week 6).
 
 ### Deliverable: Hash-Chained Log and Tampering Detection
-![Task 4 - Hash-Chained Log and Tamper Detection](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task4.png)
-*GitHub Evidence Link:* [Task 4 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task4.png)
+![Task 4 - Hash-Chained Log and Tamper Detection](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task4.png)
+
+*GitHub Evidence Link:* [Task 4 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task4.png)
 
 ---
 
@@ -181,8 +185,9 @@ fi
 > **Note:** This is what a SIEM does: correlate events across sources into a single detection that no individual log would reveal.
 
 ### Deliverable: Event Correlation and Incident Alert Output
-![Task 5 - Event Correlation Alert Output](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task5.png)
-*GitHub Evidence Link:* [Task 5 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task5.png)
+![Task 5 - Event Correlation Alert Output](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task5.png)
+
+*GitHub Evidence Link:* [Task 5 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task5.png)
 
 ---
 
@@ -202,8 +207,9 @@ cat evidence.sha256
 ```
 
 ### Deliverable: Containment Rule Enforcement & Evidence SHA256 Hash
-![Task 6 - Containment Rule and Evidence Hash](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task6.png)
-*GitHub Evidence Link:* [Task 6 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task6.png)
+![Task 6 - Containment Rule and Evidence Hash](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task6.png)
+
+*GitHub Evidence Link:* [Task 6 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task6.png)
 
 ---
 
@@ -282,6 +288,7 @@ $ sha256sum -c evidence.sha256
 evidence_20250301.log: OK
 ```
 
+![Verification - Containment Rule and Evidence Hash](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_verification.png)
 ---
 
 ## Security Best-Practices Checklist
