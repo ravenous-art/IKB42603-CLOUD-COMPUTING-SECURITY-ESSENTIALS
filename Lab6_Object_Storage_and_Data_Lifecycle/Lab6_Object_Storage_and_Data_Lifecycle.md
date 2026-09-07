@@ -64,11 +64,11 @@
   - Presigned URL generation and expiration testing:  
     ![Task 6 Presigned URL](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task6.png)
   - Transport condition policy formulation:  
-    ![Task 6 Condition Policy](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task6.1_2.png)
+    ![Task 6 Condition Policy](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task6.1.png)
   - Object listing response under condition policy:  
-    ![Task 6 Execution Test](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task6.2_2.png)
+    ![Task 6 Execution Test](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task6.2.png)
   - Policy state verification (`aws:SecureTransport`):  
-    ![Task 6 Policy Output](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task6.3_2.png)
+    ![Task 6 Policy Output](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task6.3.png)
 
 ---
 
@@ -86,7 +86,7 @@
 - **Description:** Configured automated lifecycle rules for object expiration and incomplete multipart upload cleanup[cite: 1]. Executed cryptographic erasure by disabling and scheduling deletion of the underlying Customer Managed KMS Key[cite: 1].
 - **Evidences:**
   - Lifecycle rules configuration and KMS key state set to `PendingDeletion`:  
-    ![Task 8 Lifecycle & Cryptographic Erasure](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task8.jpg)
+    ![Task 8 Lifecycle & Cryptographic Erasure](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_task8.png)
 
 ---
 
@@ -167,3 +167,6 @@ aws:kms f2c54e7b-076c-4ca7-bed5-95133868576f
 RetireConfidentialRecords       Enabled
 AbortIncompleteUploads  Enabled
 PendingDeletion
+```
+![Verification](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_verification.png)
+```
