@@ -79,8 +79,8 @@ cat auth.log
 ```
 
 ### Deliverable: Application Auth Log Created
-![Task 1 - Generated Application Auth Logs](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task1.png)
-*GitHub Evidence Link:* [Task 1 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/task1.png)
+![Task 1 - Generated Application Auth Logs](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task1.png)
+*GitHub Evidence Link:* [Task 1 Screenshot](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_task1.png)
 
 ---
 
