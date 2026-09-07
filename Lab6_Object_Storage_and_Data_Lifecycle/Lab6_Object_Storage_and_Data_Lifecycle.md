@@ -169,4 +169,4 @@ AbortIncompleteUploads  Enabled
 PendingDeletion
 ```
 ![Verification](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab6_Object_Storage_and_Data_Lifecycle/Evidence/Lab6_verification.png)
-```
+
