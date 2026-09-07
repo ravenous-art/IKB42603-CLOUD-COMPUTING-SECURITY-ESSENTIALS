@@ -288,7 +288,7 @@ $ sha256sum -c evidence.sha256
 evidence_20250301.log: OK
 ```
 
-![Verification - Containment Rule and Evidence Hash](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_verification.png)
+![Verification - Command Verification](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_verification.png)
 ---
 
 ## Security Best-Practices Checklist
@@ -310,7 +310,7 @@ rm -f auth.log auth.chain auth.tampered auth.tampered.chain evidence_*.log evide
 # Stop and remove the LocalStack Docker container
 docker stop localstack && docker rm localstack
 ```
-
+![Cleanup - Cleanup & Teardown](https://raw.githubusercontent.com/ravenous-art/IKB42603-CLOUD-COMPUTING-SECURITY-ESSENTIALS/main/Lab5_Monitoring_Logging_and_Incident_Detection/Evidence/Lab5_cleanup.png)
 ---
 
 ## References
