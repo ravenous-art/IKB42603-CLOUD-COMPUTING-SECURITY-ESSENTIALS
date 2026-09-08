@@ -1,1 +1,30 @@
+# Section 6: Data-Privacy & Integrity Assessment (Technical Evidence Pack)
 
+## 6.1 Introduction: Documentary vs. Technical Evidence
+In evaluating MediPay's proposed public cloud provider, relying solely on documentary assertions—such as the Service Level Agreement (SLA), the CSA STAR entry, and the Consensus Assessments Initiative Questionnaire (CAIQ)—only documents what the provider *claims* to do[cite: 1]. These artifacts represent assertions of intent, not verified execution. 
+
+To satisfy professional auditing standards and rigorous compliance expectations, this section establishes empirical verification by testing controls inside a controlled, containerized LocalStack and Kubernetes environment[cite: 1]. Technical evidence proves that a specific security configuration is active, enforced, and reproducible via code, ensuring that MediPay's multi-tenant architecture meets PCI DSS v4.0 and PDPA 2010 (as amended in 2024) obligations[cite: 1].
+
+---
+
+## 6.2 Technical Evidence Register
+The following evidence register contains eight controls, mapping core legal and regulatory obligations to the Cloud Controls Matrix (CCM v4) domains[cite: 1]. Each entry defines the shared-responsibility boundary, the reproducible verification method, and the observed technical output collected from the environment on 08 September 2026 by Syahmi Ikbal.
+
+| Obligation | CCM Control ID | Responsibility | Verification Method | Evidence & Date |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Limit access to system components (PCI DSS Req. 7.1.1)** | **IAM-05** (Least Privilege) | **Shared** — Provider supplies IAM engine; MediPay must configure least-privilege roles for tenants[cite: 1]. | `aws $EP iam list-role-policies --role-name patient-lookup-role --output json` | Output confirms role policies contain only `"patient-read-only"`. Collected 08 Sep 2026 by Syahmi Ikbal. |
+| **2. Segregation of tenant networks in virtualized environments (ISO/IEC 27017)** | **IVS-06** (Segmentation and Segregation) | **Shared** — Provider ensures hypervisor isolation; MediPay must configure VPCs and network policies[cite: 1]. | `kubectl get networkpolicy -n medipay-tenant-a -o yaml` | Output confirms `default-deny-all` network policy active in namespace `medipay-tenant-a`. Collected 08 Sep 2026 by Syahmi IKBAL. |
+| **3. PAN must be rendered unreadable wherever stored (PCI DSS v4.0 Req. 3.5.1)** | **CEK-03** (Data Encryption) | **Shared** — Provider supplies KMS; MediPay must enable bucket encryption and select a customer-managed key[cite: 1]. | `aws $EP s3api get-bucket-encryption --bucket $BUCKET --output json` | Output shows `SSEAlgorithm: aws:kms` with Master Key ID `13cc4401-5510-4d83-86a0-a5f32b6026b4`. Collected 08 Sep 2026 by Syahmi IKBAL. |
+| **4. Personal data shall not be kept longer than necessary (PDPA Retention Principle)** | **DSP-16** (Data Retention and Disposal) | **Shared** — Provider supplies lifecycle tools; MediPay must configure expiration rules for PHI storage[cite: 1]. | `aws $EP s3api get-bucket-lifecycle-configuration --bucket $BUCKET --query 'Rules[].[ID,Status]'` | Output confirms lifecycle rule `PHI-Retention` is `Enabled`. Collected 08 Sep 2026 by Syahmi IKBAL. |
+| **5. Audit trails must be secured and centrally managed (PCI DSS Req. 10.2)** | **LOG-07** (Audit Logging and Monitoring) | **Shared** — Provider generates management plane logs; MediPay must monitor, centralize, and secure them[cite: 1]. | `docker logs "$LS_CONTAINER" 2>&1 \| grep -E "AWS [a-z0-9]+\.[A-Za-z]+ =>" > mgmt-trail.log` | Output successfully generated `mgmt-trail.log` containing 42 tracked requests and uploaded via low-level API. Collected 08 Sep 2026 by Syahmi IKBAL. |
+| **6. Validate software security before deployment (PCI DSS Req. 6.2)** | **AIS-06** (Automated Secure App Deployment) | **Customer** — MediPay is entirely responsible for its own CI/CD pipeline and code security gates[cite: 1]. | `bash ci-gate.sh > /dev/null 2>&1; echo $?` | Output shows gate exit code `0` (policy satisfied, deployment permitted). Collected 08 Sep 2026 by Syahmi IKBAL. |
+| **7. Guardrails against public exposure of sensitive PHI (PDPA Security Principle)** | **DSP-17** (Data Protection) | **Customer** — MediPay must configure account-level and bucket-level blocks on public ACLs and policies[cite: 1]. | `aws $EP s3api get-public-access-block --bucket $BUCKET --output json` | Output confirms all public access blocks (`BlockPublicAcls`, `IgnorePublicAcls`, etc.) are set to `true`. Collected 08 Sep 2026 by Syahmi IKBAL. |
+| **8. Cryptographic keys must be rotated at defined intervals (PCI DSS Req. 3.6)** | **CEK-12** (Key Rotation) | **Shared** — Provider provides automated rotation capability; MediPay must activate it for customer keys[cite: 1]. | `aws $EP kms get-key-rotation-status --key-id $KMS_KEY --output json` | Output confirms `KeyRotationEnabled: true`. Collected 08 Sep 2026 by Syahmi IKBAL. |
+
+---
+
+## 6.3 Technical Analysis & Shared-Responsibility Boundaries
+The technical evidence confirms that while public cloud infrastructure provides robust foundational security primitives, default settings remain unconfigured and insecure. MediPay carries the operational responsibility to enforce least privilege (`IAM-05`), network micro-segmentation (`IVS-06`), customer-managed key encryption (`CEK-03`), and automated data disposal (`DSP-16`)[cite: 1].
+
+### Limitations & Un-Evidenced Controls
+In accordance with professional compliance standards, it must be explicitly noted that local simulation environments cannot evaluate physical or administrative controls[cite: 1]. Specifically, items such as physical data center security, environmental redundancy, provider personnel background vetting, and multi-region hardware fault tolerance cannot be verified via terminal execution[cite: 1]. In line with professional auditing judgment, these un-evidenced controls are accepted based on external third-party assurance documentation (specifically, independent SOC 2 Type II reports and ISO/IEC 27001 certifications provided by the cloud vendor), which are further addressed in Section 7[cite: 1].
